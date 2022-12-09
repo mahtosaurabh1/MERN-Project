@@ -1,0 +1,79 @@
+ let arr=[
+        {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },{
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },{
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },{
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           },
+           {
+            "name":"hello",
+            "price":500,
+            "duration":"30",
+            "discount":"20%",
+            "ratingsAverage":"4*"
+
+           }
+    ]
