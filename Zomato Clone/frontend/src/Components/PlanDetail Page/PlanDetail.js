@@ -27,7 +27,7 @@ function PlanDetail() {
   }, []);
 
   const handleClick = async () => {
-    let result = await fetch("http://localhost:5000/plandetail", {
+    let result = await fetch("http://localhost:5000/add-review", {
       method: "post",
       body: JSON.stringify({ review, rate }),
       headers: {
@@ -40,13 +40,13 @@ function PlanDetail() {
   };
 
   const getAllReview = async () => {
-    let result = await fetch("http://localhost:5000/plandetail");
+    let result = await fetch("http://localhost:5000/get-review");
     result = await result.json();
     console.log("review",result);
     setAllReview(result);
   };
   const handleDelete = async (id) => {
-    let result = await fetch(`http://localhost:5000/plandetail/${id}`, {
+    let result = await fetch(`http://localhost:5000/delete-review/${id}`, {
       method: "Delete",
     });
     result = await result.json();
