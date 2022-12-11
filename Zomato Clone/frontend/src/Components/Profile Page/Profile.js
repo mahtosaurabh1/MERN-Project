@@ -3,10 +3,7 @@ import '../Styles/profile.css';
 
 
 function Profile() {
-    const [password, passwordSet] = useState('')
-    const [passwordCnf, passwordCnfSet] = useState('')
-    const [email, emailSet] = useState('');
-    const [name, nameSet] = useState('');
+    let auth=localStorage.getItem('user')
  
     const handleClick = async () => {
        
@@ -29,22 +26,16 @@ function Profile() {
                     </div>
                     <div className="entryBox">
                         <div className="entryText">Email</div>
-                        <input className="email input" type="email" value={email} onChange={(e) => emailSet(e.target.value)} />
+                        <input className="email input" type="email" value={JSON.parse(auth).email} />
                     </div>
-                    <div className="entryBox">
-                        <div className="entryText">Password</div>
-                        <input className="password input" type="text" value={password} onChange={(e) => passwordSet(e.target.value)} />
-                    </div>
-                    <div className="entryBox">
-                        <div className="entryText">Confirm Password</div>
-                        <input className="password input" type="text" value={passwordCnf} onChange={(e) => passwordCnfSet(e.target.value)} />
-                    </div>
+                   
+                   
                     <div className="entryBox">
                         <div className="entryText">Name</div>
-                        <input className="password input" type="text" value={name} onChange={(e) => nameSet(e.target.value)} />
+                        <input className="password input" type="text" value={JSON.parse(auth).name} />
                     </div>
                     <button className="loginBtn  form-button" type="submit" onClick={handleClick}>
-                        Update Profile
+                        Hello
                     </button>
                 </div>
             </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import '../Styles/plan.css';
 import Tick from '../Images/check-mark.png'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 function Plans() {
     const [arr, arrset] = useState([]);
