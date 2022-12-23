@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../Styles/allplans.css';
 import Tick from '../Images/check-mark.png'
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+import {url} from "../../api.js";
+
 
 function AllPlans() {
     const [arr, arrset] = useState([]);
@@ -13,7 +15,7 @@ function AllPlans() {
       }, []);
 
     const getproducts = async () => {
-        let result = await fetch("http://localhost:5000/allplans");
+        let result = await fetch(`${url}/allplans`);
         result = await result.json();
         arrset(result);
       };

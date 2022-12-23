@@ -10,6 +10,9 @@ import ForgetPassword from './Components/Login Page/ForgetPassword';
 import AllPlans from './Components/Plan Page/AllPlans';
 import Profile from './Components/Profile Page/Profile';
 import PlanDetail from './Components/PlanDetail Page/PlanDetail';
+
+console.log(process.env.BASE_URL);
+
 function App() {
 
   return (

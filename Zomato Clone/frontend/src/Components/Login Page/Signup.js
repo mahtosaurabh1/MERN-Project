@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import '../Styles/login.css';
-
+import {url} from "../../api.js";
 function Signup() {
     // react-router-dom
     const [name, nameSet] = useState("");
@@ -13,7 +13,7 @@ function Signup() {
 
     const handleSignup = async () => {
         console.warn(name, password, email,confirm);
-        let result=await fetch('http://localhost:5000/register',{
+        let result=await fetch(`${url}/register`,{
           method:'post',
           body:JSON.stringify({name,email,password,confirm}),
           headers:{

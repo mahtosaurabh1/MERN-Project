@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Styles/planDetail.css";
 import "../Styles/contact.css";
 import { useNavigate } from "react-router-dom";
+import {url} from "../../api.js";
 
 function PlanDetail() {
   // const [plan, setplan] = useState({})
@@ -27,7 +28,7 @@ function PlanDetail() {
   }, []);
 
   const handleClick = async () => {
-    let result = await fetch("http://localhost:5000/add-review", {
+    let result = await fetch(`${url}/add-review`, {
       method: "post",
       body: JSON.stringify({ review, rate }),
       headers: {
@@ -40,13 +41,13 @@ function PlanDetail() {
   };
 
   const getAllReview = async () => {
-    let result = await fetch("http://localhost:5000/get-review");
+    let result = await fetch(`${url}/get-review`);
     result = await result.json();
     console.log("review",result);
     setAllReview(result);
   };
   const handleDelete = async (id) => {
-    let result = await fetch(`http://localhost:5000/delete-review/${id}`, {
+    let result = await fetch(`${url}/delete-review/${id}`, {
       method: "Delete",
     });
     result = await result.json();

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../Styles/login.css'
-
+import {url} from "../../api.js";
 function Login() {
 
     const [password, passwordSet] = useState("")
@@ -11,7 +11,7 @@ function Login() {
     let navigate=useNavigate();
 
     const handleLogin = async () => {
-        let result=await fetch('http://localhost:5000/login',{
+        let result=await fetch(`${url}/login`,{
             method:'post',
             body:JSON.stringify({email,password}),
             headers:{
